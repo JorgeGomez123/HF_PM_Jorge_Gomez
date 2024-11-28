@@ -14,7 +14,21 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Vida enemiga" />
+        android:text="Vida del Jugador" />
+
+    <ProgressBar
+        android:id="@+id/playerHealthBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="100"
+        style="?android:attr/progressBarStyleHorizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vida del Enemigo"
+        android:layout_marginTop="16dp" />
 
     <ProgressBar
         android:id="@+id/enemyHealthBar"
@@ -29,4 +43,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Atacar" />
+
+    <LinearLayout
+        android:id="@+id/gameOverLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game Over"
+            android:textSize="24sp"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <Button
+            android:id="@+id/retryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volver a Jugar" />
+
+        <Button
+            android:id="@+id/titleScreenButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pantalla de Título" />
+    </LinearLayout>
 </LinearLayout>
